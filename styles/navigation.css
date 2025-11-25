@@ -1,0 +1,982 @@
+/* ===================================
+   BESORAH YESHUA MINISTRY - NAVIGATION SYSTEM
+   Glassy, Modern Design - Fully Responsive
+   =================================== */
+
+/* ===================================
+   VARIABLES
+   =================================== */
+
+:root {
+    /* Navigation-specific variables */
+    --nav-blur: 20px;
+    --nav-blur-scrolled: 25px;
+    --nav-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --nav-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    --nav-shadow-scrolled: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
+    --nav-height: 70px;
+    --nav-height-mobile: 60px;
+    
+    /* Colors */
+    --primary-color: #205782;
+    --secondary-color: #f2842f;
+    --text-dark: #333;
+    --white: #ffffff;
+    
+    /* Breadcrumb variables */
+    --breadcrumb-height: 45px;
+    --breadcrumb-height-mobile: 40px;
+    --breadcrumb-bg: rgba(248, 249, 250, 0.95);
+    --breadcrumb-border: rgba(224, 224, 224, 0.8);
+    
+    /* Z-index layering */
+    --z-header: 1000;
+    --z-hamburger: 1001;
+    --z-nav-menu: 1002;
+    --z-backdrop: 998;
+    --z-breadcrumb: 999;
+    --z-scroll-top: 999;
+}
+
+/* ===================================
+   GLASSY HEADER NAVIGATION
+   =================================== */
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: var(--z-header);
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(var(--nav-blur));
+    -webkit-backdrop-filter: blur(var(--nav-blur));
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: var(--nav-shadow);
+    transition: var(--nav-transition);
+    will-change: transform, backdrop-filter;
+    transform: translateZ(0);
+    height: var(--nav-height);
+}
+
+header.loaded {
+    will-change: auto;
+}
+
+header.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(var(--nav-blur-scrolled));
+    -webkit-backdrop-filter: blur(var(--nav-blur-scrolled));
+    box-shadow: var(--nav-shadow-scrolled);
+}
+
+.navbar {
+    padding: 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    height: 100%;
+}
+
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+/* ===================================
+   LOGO SECTION
+   =================================== */
+
+.nav-logo a {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    text-decoration: none;
+    transition: var(--nav-transition);
+    position: relative;
+    z-index: var(--z-nav-menu);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.nav-logo a::before {
+    content: '';
+    position: absolute;
+    inset: -10px;
+    background: radial-gradient(circle, rgba(242, 132, 47, 0.2) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translateZ(0);
+}
+
+@media (hover: hover) {
+    .nav-logo a:hover::before {
+        opacity: 1;
+    }
+}
+
+.logo {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 4px 15px rgba(242, 132, 47, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    flex-shrink: 0;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+.logo-text {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    white-space: nowrap;
+}
+
+@media (hover: hover) {
+    .nav-logo a:hover .logo {
+        transform: scale(1.08) rotate(3deg);
+        box-shadow: 0 6px 20px rgba(242, 132, 47, 0.5);
+    }
+    
+    .nav-logo a:hover .logo-text {
+        color: #d97228;
+        text-shadow: 0 2px 15px rgba(242, 132, 47, 0.5);
+    }
+}
+
+.nav-logo a:focus-visible {
+    outline: 3px solid var(--secondary-color);
+    outline-offset: 4px;
+    border-radius: 8px;
+}
+
+/* ===================================
+   NAVIGATION MENU
+   =================================== */
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    margin: 0;
+    align-items: center;
+    padding: 0;
+}
+
+.nav-link {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--nav-transition);
+    position: relative;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    text-shadow: 0 1px 3px rgba(255, 255, 255, 0.5);
+    white-space: nowrap;
+    font-size: 1rem;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(242, 132, 47, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+    transform: translateZ(0);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--secondary-color), transparent);
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 2px;
+}
+
+@media (hover: hover) {
+    .nav-link:hover::before {
+        opacity: 1;
+    }
+    
+    .nav-link:hover::after {
+        width: 80%;
+    }
+    
+    .nav-link:hover {
+        color: var(--primary-color);
+        text-shadow: 0 2px 8px rgba(32, 87, 130, 0.3);
+    }
+}
+
+.nav-link.active::before {
+    opacity: 1;
+}
+
+.nav-link.active::after {
+    width: 80%;
+}
+
+.nav-link.active {
+    color: var(--primary-color);
+    text-shadow: 0 2px 8px rgba(32, 87, 130, 0.3);
+}
+
+.nav-link:focus-visible {
+    outline: 3px solid var(--secondary-color);
+    outline-offset: 2px;
+}
+
+/* ===================================
+   DONATE BUTTON - IMPROVED VISIBILITY
+   =================================== */
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn-donate {
+    background: linear-gradient(135deg, rgba(242, 132, 47, 0.9), rgba(217, 114, 40, 0.9));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: var(--white);
+    padding: 0.65rem 1.6rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: var(--nav-transition);
+    border: 2px solid rgba(242, 132, 47, 0.6);
+    box-shadow: 0 4px 15px rgba(242, 132, 47, 0.3);
+    position: relative;
+    overflow: hidden;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+    -webkit-tap-highlight-color: transparent;
+    will-change: transform;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 110px;
+}
+
+.btn-donate::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+@media (hover: hover) {
+    .btn-donate:hover::before {
+        transform: translateX(100%);
+    }
+    
+    .btn-donate:hover {
+        background: linear-gradient(135deg, var(--secondary-color), #d97228);
+        border-color: var(--secondary-color);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 25px rgba(242, 132, 47, 0.5);
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+}
+
+.btn-donate:active {
+    transform: translateY(0) scale(0.98);
+}
+
+.btn-donate:focus-visible {
+    outline: 3px solid var(--secondary-color);
+    outline-offset: 3px;
+}
+
+/* ===================================
+   HAMBURGER MENU
+   =================================== */
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: var(--z-hamburger);
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: var(--nav-transition);
+    -webkit-tap-highlight-color: transparent;
+    min-height: 44px;
+    min-width: 44px;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (hover: hover) {
+    .hamburger:hover {
+        background: rgba(242, 132, 47, 0.2);
+        border-color: rgba(242, 132, 47, 0.4);
+        transform: scale(1.05);
+    }
+    
+    .hamburger:hover .bar {
+        background: var(--secondary-color);
+    }
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background: var(--primary-color);
+    margin: 3px 0;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.3s ease,
+                background 0.3s ease;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+    transform: scale(0);
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* ===================================
+   MOBILE NAVIGATION MENU
+   =================================== */
+
+.nav-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: var(--z-backdrop);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.nav-backdrop.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* ===================================
+   BREADCRUMB NAVIGATION
+   =================================== */
+
+.breadcrumb-wrapper {
+    position: fixed;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    z-index: var(--z-breadcrumb);
+    background: var(--breadcrumb-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--breadcrumb-border);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform: translateZ(0);
+    opacity: 0;
+}
+
+.home-page .breadcrumb-wrapper {
+    display: none;
+}
+
+.breadcrumb-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: var(--breadcrumb-height);
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+}
+
+.breadcrumb-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.breadcrumb-item a {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 0.3rem 0.5rem;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.breadcrumb-item a i {
+    font-size: 0.8rem;
+}
+
+@media (hover: hover) {
+    .breadcrumb-item a:hover {
+        color: var(--secondary-color);
+        background: rgba(242, 132, 47, 0.1);
+    }
+}
+
+.breadcrumb-item a:focus-visible {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 2px;
+}
+
+.breadcrumb-separator {
+    color: #666;
+    opacity: 0.5;
+    font-size: 0.75rem;
+}
+
+.breadcrumb-item:last-child {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.breadcrumb-item:last-child a {
+    color: var(--primary-color);
+    cursor: default;
+    pointer-events: none;
+}
+
+.breadcrumb-home {
+    font-size: 1rem;
+}
+
+/* ===================================
+   SCROLL TO TOP BUTTON
+   =================================== */
+
+.scroll-to-top,
+#scrollTopBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color), #2d6fa0);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: var(--z-scroll-top);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    -webkit-tap-highlight-color: transparent;
+    min-height: 44px;
+    min-width: 44px;
+}
+
+.scroll-to-top:hover,
+#scrollTopBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #2d6fa0, var(--primary-color));
+}
+
+.scroll-to-top:focus,
+#scrollTopBtn:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 3px;
+}
+
+.scroll-to-top:active,
+#scrollTopBtn:active {
+    transform: translateY(0);
+}
+
+/* ===================================
+   PAGE LOADER STYLES
+   =================================== */
+
+.page-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.3s ease;
+}
+
+.page-loader .spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid var(--secondary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* ===================================
+   CONTENT SPACING WITH BREADCRUMB - CORRECTED
+   =================================== */
+
+main {
+    padding-top: var(--nav-height);
+}
+
+body:not(.home-page) main {
+    padding-top: calc(var(--nav-height) + var(--breadcrumb-height));
+}
+
+body:not(.home-page) .hero {
+    padding-top: 0;
+}
+
+body:not(.home-page) .page-header {
+    margin-top: 0;
+}
+
+/* ===================================
+   UTILITY CLASSES
+   =================================== */
+
+.skip-to-content {
+    position: absolute;
+    left: -9999px;
+    z-index: 9999;
+    padding: 1rem;
+    background: var(--primary-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.skip-to-content:focus {
+    left: 1rem;
+    top: 1rem;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* ===================================
+   RESPONSIVE BREAKPOINTS
+   =================================== */
+
+/* Tablets and below (768px) - HIDE DONATE BUTTON */
+@media (max-width: 768px) {
+    :root {
+        --nav-height: var(--nav-height-mobile);
+        --breadcrumb-height: var(--breadcrumb-height-mobile);
+    }
+    
+    header {
+        height: var(--nav-height-mobile);
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+    
+    /* HIDE DONATE BUTTON ON MOBILE */
+    .btn-donate {
+        display: none !important;
+    }
+    
+    .nav-wrapper {
+        position: fixed;
+        top: var(--nav-height-mobile);
+        left: 0;
+        width: 100%;
+        height: calc(100vh - var(--nav-height-mobile));
+        background: transparent;
+        pointer-events: none;
+        z-index: var(--z-nav-menu);
+    }
+    
+    .nav-menu {
+        position: fixed;
+        left: 0;
+        top: var(--nav-height-mobile);
+        flex-direction: column;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
+        width: 280px;
+        height: calc(100vh - var(--nav-height-mobile));
+        text-align: left;
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 2px 0 20px rgba(0, 0, 0, 0.1);
+        border-right: 1px solid rgba(255, 255, 255, 0.3);
+        padding: 1rem 0;
+        gap: 0;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        transform: translateX(-100%);
+        pointer-events: all;
+    }
+    
+    .nav-menu.active {
+        transform: translateX(0);
+    }
+    
+    .nav-menu li {
+        width: 100%;
+        padding: 0;
+    }
+    
+    .nav-link {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0;
+        text-align: left;
+        min-height: 44px;
+        font-size: 1rem;
+    }
+    
+    .nav-link::after {
+        display: none;
+    }
+    
+    .nav-link::before {
+        border-radius: 0;
+    }
+    
+    .nav-link:active {
+        background: rgba(242, 132, 47, 0.1);
+    }
+    
+    .breadcrumb-container {
+        height: var(--breadcrumb-height);
+    }
+    
+    .breadcrumb {
+        font-size: 0.85rem;
+        gap: 0.3rem;
+    }
+    
+    .breadcrumb-item a {
+        padding: 0.25rem 0.4rem;
+    }
+    
+    body:not(.home-page) main {
+        padding-top: calc(var(--nav-height-mobile) + var(--breadcrumb-height-mobile));
+    }
+    
+    .scroll-to-top,
+    #scrollTopBtn {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+}
+
+/* Desktop and tablets (769px and above) - SHOW DONATE BUTTON */
+@media (min-width: 769px) {
+    .btn-donate {
+        display: inline-flex !important;
+    }
+    
+    .hamburger {
+        display: none !important;
+    }
+}
+
+/* Mobile phones (480px and below) */
+@media (max-width: 480px) {
+    .nav-container {
+        padding: 0 10px;
+    }
+    
+    .logo {
+        height: 40px;
+        width: 40px;
+    }
+    
+    .logo-text {
+        font-size: 1.1rem;
+    }
+    
+    .nav-link {
+        padding: 0.65rem 1.2rem;
+    }
+    
+    .breadcrumb {
+        font-size: 0.8rem;
+    }
+    
+    .breadcrumb-item a {
+        padding: 0.2rem 0.3rem;
+    }
+    
+    .breadcrumb-separator {
+        font-size: 0.7rem;
+    }
+    
+    .breadcrumb-item a {
+        max-width: 120px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    
+    .breadcrumb-item:last-child a {
+        max-width: 150px;
+    }
+}
+
+/* Extra small devices (360px and below) */
+@media (max-width: 360px) {
+    .nav-container {
+        padding: 0 8px;
+    }
+    
+    .logo {
+        height: 36px;
+        width: 36px;
+    }
+    
+    .logo-text {
+        font-size: 1rem;
+    }
+    
+    .nav-link {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+    }
+    
+    .breadcrumb {
+        font-size: 0.75rem;
+    }
+    
+    .nav-menu {
+        width: 260px;
+    }
+}
+
+/* Landscape mode optimization */
+@media (max-height: 500px) and (orientation: landscape) {
+    .nav-menu {
+        max-height: 60vh;
+        padding: 0.4rem 0;
+    }
+    
+    .nav-link {
+        padding: 0.5rem 1.2rem;
+        min-height: 36px;
+    }
+}
+
+/* Large desktop screens (1440px and above) */
+@media (min-width: 1440px) {
+    .nav-container {
+        max-width: 1400px;
+        padding: 0 40px;
+    }
+    
+    .nav-menu {
+        gap: 2rem;
+    }
+    
+    .btn-donate {
+        padding: 0.7rem 1.8rem;
+        font-size: 1rem;
+    }
+    
+    .breadcrumb-container {
+        max-width: 1400px;
+        padding: 0 40px;
+    }
+    
+    .breadcrumb {
+        font-size: 0.95rem;
+    }
+}
+
+/* ===================================
+   ACCESSIBILITY
+   =================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .nav-menu,
+    .breadcrumb-wrapper,
+    .scroll-to-top {
+        transition: none;
+    }
+    
+    .hamburger .bar,
+    .nav-logo a::before,
+    .btn-donate::before,
+    .page-loader .spinner {
+        transition: none;
+        animation: none;
+    }
+}
+
+@media (prefers-contrast: high) {
+    header {
+        border-bottom: 2px solid currentColor;
+    }
+    
+    .breadcrumb-wrapper {
+        border-bottom: 2px solid currentColor;
+    }
+    
+    .nav-link,
+    .btn-donate {
+        border-width: 2px;
+    }
+    
+    .breadcrumb-item a {
+        border: 1px solid transparent;
+    }
+    
+    .breadcrumb-item a:hover,
+    .breadcrumb-item a:focus-visible {
+        border-color: currentColor;
+    }
+}
+
+/* ===================================
+   PRINT STYLES
+   =================================== */
+
+@media print {
+    header,
+    .breadcrumb-wrapper,
+    .hamburger,
+    .btn-donate,
+    .scroll-to-top,
+    .page-loader,
+    .nav-backdrop {
+        display: none !important;
+    }
+    
+    body:not(.home-page) main {
+        padding-top: 0 !important;
+    }
+    
+    .nav-menu {
+        position: static !important;
+        transform: none !important;
+        display: flex !important;
+        flex-direction: row;
+        background: transparent !important;
+        height: auto !important;
+    }
+}
+
+/* ===================================
+   FALLBACKS FOR OLDER BROWSERS
+   =================================== */
+
+@supports not (backdrop-filter: blur(20px)) {
+    header {
+        background: rgba(255, 255, 255, 0.95);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    header.scrolled {
+        background: rgba(255, 255, 255, 0.98);
+    }
+    
+    .breadcrumb-wrapper {
+        background: rgb(248, 249, 250);
+    }
+    
+    .nav-link::before,
+    .btn-donate {
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
+    
+    .nav-menu {
+        background: rgba(255, 255, 255, 0.98);
+    }
+}
