@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Submit your prayer request to Besorah Yeshua International Ministry. Our community is here to pray with you for healing, guidance, salvation, and thanksgiving.">
+    
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="keywords" content="prayer request, Ethiopian ministry prayer, Christian prayer, prayer support, intercessory prayer, Besorah Yeshua prayer">
+    
+    <link rel="canonical" href="https://besorayeshuaministry.netlify.app/prayer.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Prayer Requests - Besorah Yeshua International Ministry">
+    <meta property="og:description" content="Submit your prayer request. We believe in the power of prayer.">
+    
+    <title>Prayer Requests - Besorah Yeshua International Ministry</title>
+    
+    <!-- Critical CSS inline for faster load -->
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;line-height:1.6;color:#333;overflow-x:hidden}
+        .page-loader{position:fixed;top:0;left:0;width:100%;height:100%;background:#fff;display:flex;align-items:center;justify-content:center;z-index:99999;transition:opacity 0.3s ease}
+        .loader-spinner{border:4px solid #f3f3f3;border-top:4px solid #205782;border-radius:50%;width:50px;height:50px;animation:spin 1s linear infinite}
+        @keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+        .hidden-field{position:absolute;left:-9999px;opacity:0;pointer-events:none}
+    </style>
+    
+    <!-- CSS Loading Order -->
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/navigation.css">
+    <link rel="stylesheet" href="styles/prayer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    
+    <!-- Schema.org markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Prayer Requests",
+      "description": "Submit your prayer request to Besorah Yeshua International Ministry",
+      "url": "https://besorayeshuaministry.netlify.app/prayer.html"
+    }
+    </script>
+</head>
+<body>
+    <!-- Page Loader -->
+    <div class="page-loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Skip to main content -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html" aria-label="Besorah Yeshua International Ministry Home">
+                        <img src="images/logo.png" alt="Besorah Yeshua Ministry Logo" class="logo" width="50" height="50">
+                        <span class="logo-text">Besorah Yeshua</span>
+                    </a>
+                </div>                
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
+                    <li class="nav-item"><a href="prayer.html" class="nav-link active" aria-current="page">Prayer</a></li>
+                    <li class="nav-item"><a href="partnership.html" class="nav-link">Partnership</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="resources.html" class="nav-link">Resources</a></li>
+                    <li class="nav-item"><a href="bible-planner.html" class="nav-link">Bible Study</a></li>
+                </ul>
+                <a href="donate.html" class="btn btn-donate">Donate</a>
+                <button class="hamburger" data-nav-toggle aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Prayer Requests</h1>
+                <p>We believe in the power of prayer. Let us lift you up in prayer.</p>
+            </div>
+        </section>
+
+        <!-- Prayer Request Section -->
+        <section class="prayer-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>We're Praying For You</h2>
+                    <p>Submit your prayer request and let our community intercede on your behalf</p>
+                </div>
+
+                <div class="prayer-grid">
+                    <article class="prayer-card" tabindex="0">
+                        <div class="card-icon" aria-hidden="true">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h3>Personal Prayer</h3>
+                        <p id="personal-prayer-desc">Share your personal needs, challenges, or thanksgiving with our prayer team</p>
+                        <button class="btn-request" type="button" aria-describedby="personal-prayer-desc" data-prayer-type="personal">
+                            Submit Request
+                        </button>
+                    </article>
+
+                    <article class="prayer-card" tabindex="0">
+                        <div class="card-icon" aria-hidden="true">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3>Family Prayer</h3>
+                        <p id="family-prayer-desc">Request prayer for your loved ones, family unity, and household blessings</p>
+                        <button class="btn-request" type="button" aria-describedby="family-prayer-desc" data-prayer-type="family">
+                            Submit Request
+                        </button>
+                    </article>
+
+                    <article class="prayer-card" tabindex="0">
+                        <div class="card-icon" aria-hidden="true">
+                            <i class="fas fa-hands-praying"></i>
+                        </div>
+                        <h3>Ministry Prayer</h3>
+                        <p id="ministry-prayer-desc">Pray for our mission, church planting efforts, and evangelism across Ethiopia</p>
+                        <button class="btn-request" type="button" aria-describedby="ministry-prayer-desc" data-prayer-type="ministry">
+                            Submit Request
+                        </button>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scripture Section -->
+        <section class="scripture">
+            <div class="container">
+                <blockquote>
+                    <i class="fas fa-quote-left" aria-hidden="true"></i>
+                    <p>"The prayer of a righteous person is powerful and effective"</p>
+                    <cite>— James 5:16</cite>
+                </blockquote>
+            </div>
+        </section>
+
+        <!-- Prayer Modal -->
+        <div id="prayerModal" class="modal" role="dialog" aria-labelledby="modal-title" aria-modal="true" aria-hidden="true">
+            <div class="modal-content">
+                <button class="close-btn" type="button" aria-label="Close prayer request form">
+                    <i class="fas fa-times" aria-hidden="true"></i>
+                </button>
+
+                <div class="modal-header">
+                    <h2 id="modal-title">Submit Prayer Request</h2>
+                    <p>We believe in the power of prayer. Share your request with us.</p>
+                </div>
+
+                <div id="formContainer">
+                    <!-- Prayer Request Form -->
+                    <form id="prayerForm" name="prayer-request" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/prayer-thank-you.html">
+                        
+                        <!-- Netlify Requirements -->
+                        <input type="hidden" name="form-name" value="prayer-request">
+                        <input type="hidden" id="prayerType" name="prayer-type" value="">
+                        
+                        <!-- Honeypot -->
+                        <p class="hidden-field">
+                            <label>Don't fill this out: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+                        </p>
+
+                        <!-- Name Field -->
+                        <div class="form-group">
+                            <label for="name">Your Name <span class="required" aria-label="required">*</span></label>
+                            <input type="text" id="name" name="name" required placeholder="Enter your name" aria-required="true" autocomplete="name">
+                        </div>
+
+                        <!-- Email Field -->
+                        <div class="form-group">
+                            <label for="email">Email Address <span class="required" aria-label="required">*</span></label>
+                            <input type="email" id="email" name="email" required placeholder="your@email.com" aria-required="true" autocomplete="email">
+                        </div>
+
+                        <!-- Phone Field -->
+                        <div class="form-group">
+                            <label for="phone">Phone Number (Optional)</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+251 XXX XXX XXX" autocomplete="tel">
+                        </div>
+
+                        <!-- Category Field -->
+                        <div class="form-group">
+                            <label for="category">Prayer Category <span class="required" aria-label="required">*</span></label>
+                            <select id="category" name="category" required aria-required="true">
+                                <option value="">Select a category</option>
+                                <option value="healing">Healing</option>
+                                <option value="financial">Financial Need</option>
+                                <option value="relationship">Relationship</option>
+                                <option value="salvation">Salvation</option>
+                                <option value="guidance">Guidance</option>
+                                <option value="thanksgiving">Thanksgiving</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <!-- Prayer Request Field -->
+                        <div class="form-group">
+                            <label for="request">Your Prayer Request <span class="required" aria-label="required">*</span></label>
+                            <textarea id="request" name="request" required rows="6" placeholder="Share your prayer request with us..." aria-required="true"></textarea>
+                        </div>
+
+                        <!-- Anonymous Checkbox -->
+                        <div class="form-group">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="anonymous" name="anonymous" value="yes">
+                                <label for="anonymous">Keep my request anonymous</label>
+                            </div>
+                        </div>
+
+                        <!-- Updates Checkbox -->
+                        <div class="form-group">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="updates" name="updates" value="yes" checked>
+                                <label for="updates">Send me prayer updates and encouragement</label>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn-submit">
+                            <i class="fas fa-paper-plane" aria-hidden="true"></i> Submit Prayer Request
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="images/logo.png" alt="Besorah Yeshua Ministry Logo" class="footer-logo" width="60" height="60">
+                    <span class="footer-site-name">Besorah Yeshua</span>
+                    <p class="footer-tagline">International Ministry</p>
+                    <p class="footer-tagline">Spreading the Gospel to Ethiopia and the nations</p>
+                    <span class="follow-us">Follow Us</span>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/byministry_et" aria-label="Follow us on Instagram" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://youtube.com/@byministry_et" aria-label="Subscribe to our YouTube channel" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-youtube" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://chat.whatsapp.com/CzuJYpQ0SoM7IjGLnKSGlP" aria-label="Join our WhatsApp group" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://t.me/byministry" aria-label="Join our Telegram channel" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-telegram" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://tiktok.com/@besorah.yeshua" aria-label="Follow us on TikTok" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-tiktok" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="prayer.html">Prayer</a></li>
+                        <li><a href="partnership.html">Partnership</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Get Involved</h4>
+                    <ul>
+                        <li><a href="donate.html">Donate</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="partnership.html">Volunteer</a></li>
+                        <li><a href="events.html">Upcoming Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-envelope" aria-hidden="true"></i> besorahyeshua@gmail.com</li>
+                        <li><i class="fas fa-phone" aria-hidden="true"></i> +251963149592</li>
+                        <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Wosen Sefer, Yeka, Addis Ababa 1000, Ethiopia</li>
+                    </ul>
+                </div>                
+            </div>
+            <div class="footer-bottom">
+               <p>&copy; <span id="copyright-year">2024</span> Besorah Yeshua International Ministry. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" class="scroll-top" aria-label="Scroll to top" style="display: none;">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript Files - CORRECTED ORDER -->
+    <script src="scripts/navigation.js"></script>
+    <script src="scripts/prayer.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

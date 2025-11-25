@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible Planner Test</title>
+        <!-- Preload critical assets -->
+    <link rel="preload" as="image" href="/images/logo.png">
+    <link rel="preload" as="style" href="/styles/style.css">
+    <link rel="stylesheet" href="navigation.css">
+    
+
+    <link rel="stylesheet" href="styles/bible-planner.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <div id="bible-planner-app" class="min-h-screen bg-gradient">
+        <div class="container mx-auto p-4">
+            <h1 class="responsive-heading">Testing...</h1>
+            <div id="test-output"></div>
+        </div>
+    </div>
+
+    <script>
+        // Simple test script
+        document.getElementById('test-output').innerHTML = `
+            <div style="background: white; padding: 2rem; border-radius: 1rem; margin-top: 2rem;">
+                <h2 style="color: #10b981; margin-bottom: 1rem;">✓ Basic HTML & CSS Working!</h2>
+                <p>Now testing JavaScript...</p>
+            </div>
+        `;
+
+        // Test if we can load the main script
+        var script = document.createElement('script');
+        script.src = 'scripts/bible-planner.js';
+        script.onload = function() {
+            document.getElementById('test-output').innerHTML += `
+                <div style="background: #d1fae5; padding: 1rem; border-radius: 0.5rem; margin-top: 1rem; color: #065f46;">
+                    ✓ JavaScript file loaded successfully!
+                </div>
+            `;
+        };
+        script.onerror = function() {
+            document.getElementById('test-output').innerHTML += `
+                <div style="background: #fee2e2; padding: 1rem; border-radius: 0.5rem; margin-top: 1rem; color: #991b1b;">
+                    ✗ JavaScript file failed to load. Check file path: scripts/bible-planner.js
+                </div>
+            `;
+        };
+        document.head.appendChild(script);
+    </script>
+</body>
+</html>

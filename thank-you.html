@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thank you for contacting Besorah Yeshua International Ministry. We will respond to your message within 24-48 hours.">
+    <meta name="robots" content="noindex, follow">
+    
+    <title>Thank You - Besorah Yeshua International Ministry</title>
+    
+    <link rel="canonical" href="https://besorayeshuaministry.netlify.app/thank-you.html">
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" as="image" href="images/logo.png">
+    <link rel="preload" as="style" href="styles/style.css">
+    
+    <!-- Critical CSS inline -->
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;line-height:1.6;color:#333;overflow-x:hidden}
+        :root {
+            --primary-color: #205782;
+            --secondary-color: #f2842f;
+            --dark-orange: #d97228;
+            --text-dark: #333;
+            --text-light: #666;
+            --white: #ffffff;
+            --light-bg: #f8f9fa;
+            --shadow-lg: 0 5px 30px rgba(0,0,0,0.15);
+        }
+    </style>
+    
+    <!-- Stylesheets - CORRECTED PATHS -->
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/navigation.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    
+    <!-- Page-specific styles -->
+    <style>
+        .thank-you-section {
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5rem 0;
+            background: linear-gradient(135deg, var(--light-bg) 0%, #ffffff 100%);
+        }
+
+        .thank-you-content {
+            text-align: center;
+            max-width: 700px;
+            padding: 3rem;
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+            animation: fadeInUp 0.6s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .thank-you-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, var(--secondary-color), var(--dark-orange));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            animation: scaleIn 0.5s ease;
+            box-shadow: 0 5px 20px rgba(242, 132, 47, 0.3);
+        }
+
+        .thank-you-icon i {
+            font-size: 3rem;
+            color: var(--white);
+        }
+
+        @keyframes scaleIn {
+            from {
+                transform: scale(0);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .thank-you-content h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .thank-you-content > p {
+            color: var(--text-light);
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .thank-you-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.9rem 1.8rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background: #2d6fa0;
+            border-color: #2d6fa0;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(32, 87, 130, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+
+        .btn-secondary:hover {
+            background: var(--secondary-color);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(242, 132, 47, 0.3);
+        }
+
+        .info-box {
+            background: var(--light-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-top: 2rem;
+            text-align: left;
+            border: 1px solid #e0e0e0;
+        }
+
+        .info-box h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .info-box ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .info-box li {
+            padding: 0.7rem 0;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .info-box li:last-child {
+            border-bottom: none;
+        }
+
+        .info-box i {
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        .info-box a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .info-box a:hover {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+
+        .event-details-box {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border-left: 4px solid var(--secondary-color);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-top: 2rem;
+            text-align: left;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .event-details-box h3 {
+            color: var(--primary-color);
+            margin-bottom: 1.2rem;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .event-detail-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .event-detail-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .event-detail-item i {
+            color: var(--secondary-color);
+            margin-top: 0.2rem;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        .event-detail-item strong {
+            color: var(--primary-color);
+            min-width: 90px;
+            font-weight: 600;
+        }
+
+        .highlight-text {
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+
+        /* Different content sections - hidden by default */
+        .content-general,
+        .content-event {
+            display: none;
+        }
+
+        .content-general.active,
+        .content-event.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .thank-you-section {
+                padding: 3rem 0;
+            }
+
+            .thank-you-content {
+                padding: 2rem 1.5rem;
+                margin: 1rem;
+            }
+
+            .thank-you-content h1 {
+                font-size: 2rem;
+            }
+
+            .thank-you-content > p {
+                font-size: 1rem;
+            }
+
+            .thank-you-icon {
+                width: 80px;
+                height: 80px;
+            }
+
+            .thank-you-icon i {
+                font-size: 2.5rem;
+            }
+
+            .thank-you-actions {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .info-box,
+            .event-details-box {
+                padding: 1.2rem;
+            }
+
+            .event-detail-item {
+                flex-direction: column;
+                gap: 0.3rem;
+            }
+
+            .event-detail-item strong {
+                min-width: auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .thank-you-content h1 {
+                font-size: 1.75rem;
+            }
+
+            .info-box h3 {
+                font-size: 1.1rem;
+            }
+
+            .info-box li,
+            .event-detail-item {
+                font-size: 0.95rem;
+            }
+        }
+
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+            .thank-you-content,
+            .thank-you-icon,
+            .content-general,
+            .content-event {
+                animation: none !important;
+            }
+
+            .btn {
+                transition: none;
+            }
+
+            .btn:hover {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html" aria-label="Besorah Yeshua International Ministry Home">
+                        <img src="images/logo.png" 
+                             alt="Besorah Yeshua Ministry Logo" 
+                             class="logo" 
+                             width="50" 
+                             height="50"
+                             loading="eager"
+                             decoding="async">
+                        <span class="logo-text">Besorah Yeshua</span>
+                    </a>
+                </div>
+                
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
+                    <li class="nav-item"><a href="prayer.html" class="nav-link">Prayer</a></li>
+                    <li class="nav-item"><a href="partnership.html" class="nav-link">Partnership</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="resources.html" class="nav-link">Resources</a></li>
+                </ul>
+                
+                <a href="donate.html" class="btn-donate">Donate</a>
+                
+                <button class="hamburger" data-nav-toggle aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Thank You Section -->
+        <section class="thank-you-section" aria-labelledby="thank-you-heading">
+            <div class="container">
+                <div class="thank-you-content" role="status" aria-live="polite">
+                    <div class="thank-you-icon" aria-hidden="true">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+
+                    <!-- General Contact Content -->
+                    <div class="content-general">
+                        <h1 id="thank-you-heading">Thank You! 🙏</h1>
+                        <p>Your message has been successfully sent. We appreciate you reaching out to Besorah Yeshua International Ministry.</p>
+                        <p>Our team will review your message and get back to you within 24-48 hours.</p>
+
+                        <nav class="thank-you-actions" aria-label="Quick navigation">
+                            <a href="index.html" class="btn btn-primary">
+                                <i class="fas fa-home" aria-hidden="true"></i>
+                                Back to Home
+                            </a>
+                            <a href="about.html" class="btn btn-secondary">
+                                <i class="fas fa-info-circle" aria-hidden="true"></i>
+                                Learn More About Us
+                            </a>
+                        </nav>
+
+                        <div class="info-box">
+                            <h3>
+                                <i class="fas fa-info-circle" aria-hidden="true"></i>
+                                What's Next?
+                            </h3>
+                            <ul>
+                                <li>
+                                    <i class="fas fa-check-circle" aria-hidden="true"></i>
+                                    <span>We've received your message</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-envelope-open-text" aria-hidden="true"></i>
+                                    <span>Our team will review it carefully</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-reply" aria-hidden="true"></i>
+                                    <span>Expect a response within 24-48 hours</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-phone" aria-hidden="true"></i>
+                                    <span>For urgent matters, call us at <a href="tel:+251963149592">+251 963 149592</a></span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="info-box" style="margin-top: 1.5rem;">
+                            <h3>
+                                <i class="fas fa-heart" aria-hidden="true"></i>
+                                Meanwhile...
+                            </h3>
+                            <ul>
+                                <li>
+                                    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                                    <span><a href="events.html">Check out our upcoming events</a></span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-handshake" aria-hidden="true"></i>
+                                    <span><a href="partnership.html">Explore partnership opportunities</a></span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-donate" aria-hidden="true"></i>
+                                    <span><a href="donate.html">Support our mission</a></span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-book-open" aria-hidden="true"></i>
+                                    <span><a href="resources.html">Browse our resources</a></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Event Registration Content -->
+                    <div class="content-event">
+                        <h1 id="event-thank-you-heading">Registration Confirmed! 🎉</h1>
+                        <p>Thank you for registering! We're excited to have you join us for this transformative event.</p>
+                        <p>A confirmation email with event details will be sent to you shortly.</p>
+
+                        <!-- Event Details (dynamically filled) -->
+                        <div class="event-details-box" id="eventDetailsBox">
+                            <h3>
+                                <i class="fas fa-calendar-check" aria-hidden="true"></i>
+                                Your Event Registration
+                            </h3>
+                            <div class="event-detail-item">
+                                <i class="fas fa-tag" aria-hidden="true"></i>
+                                <div>
+                                    <strong>Event:</strong>
+                                    <span id="eventNameDisplay" class="highlight-text"></span>
+                                </div>
+                            </div>
+                            <div class="event-detail-item">
+                                <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                                <div>
+                                    <strong>Date:</strong>
+                                    <span id="eventDateDisplay"></span>
+                                </div>
+                            </div>
+                            <div class="event-detail-item">
+                                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                <div>
+                                    <strong>Location:</strong>
+                                    <span id="eventLocationDisplay"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <nav class="thank-you-actions" aria-label="Quick navigation">
+                            <a href="events.html" class="btn btn-primary">
+                                <i class="fas fa-calendar" aria-hidden="true"></i>
+                                View All Events
+                            </a>
+                            <a href="index.html" class="btn btn-secondary">
+                                <i class="fas fa-home" aria-hidden="true"></i>
+                                Back to Home
+                            </a>
+                        </nav>
+
+                        <div class="info-box">
+                            <h3>
+                                <i class="fas fa-info-circle" aria-hidden="true"></i>
+                                What Happens Next?
+                            </h3>
+                            <ul>
+                                <li>
+                                    <i class="fas fa-check-circle" aria-hidden="true"></i>
+                                    <span>Your registration has been confirmed</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                                    <span>Check your email for detailed event information</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-bell" aria-hidden="true"></i>
+                                    <span>We'll send you a reminder 3 days before the event</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-phone" aria-hidden="true"></i>
+                                    <span>Questions? Call us at <a href="tel:+251963149592">+251 963 149592</a></span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="info-box" style="margin-top: 1.5rem;">
+                            <h3>
+                                <i class="fas fa-calendar-plus" aria-hidden="true"></i>
+                                Prepare for the Event
+                            </h3>
+                            <ul>
+                                <li>
+                                    <i class="fas fa-pray" aria-hidden="true"></i>
+                                    <span>Join us in prayer for the event</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-share-alt" aria-hidden="true"></i>
+                                    <span>Invite friends and family</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-book-open" aria-hidden="true"></i>
+                                    <span>Bring your Bible and notebook</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-heart" aria-hidden="true"></i>
+                                    <span><a href="donate.html">Support the ministry</a></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="images/logo.png" 
+                         alt="Besorah Yeshua Ministry Logo" 
+                         class="footer-logo" 
+                         width="60" 
+                         height="60" 
+                         loading="lazy">
+                    <span class="footer-site-name">Besorah Yeshua</span>
+                    <p class="footer-tagline">International Ministry</p>
+                    <p class="footer-tagline">Spreading the Gospel to Ethiopia and the nations</p>
+                    <span class="follow-us">Follow Us</span>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/byministry_et" 
+                           aria-label="Follow us on Instagram" 
+                           target="_blank" 
+                           rel="noopener noreferrer">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://youtube.com/@byministry_et" 
+                           aria-label="Subscribe to our YouTube channel" 
+                           target="_blank" 
+                           rel="noopener noreferrer">
+                            <i class="fab fa-youtube" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://chat.whatsapp.com/CzuJYpQ0SoM7IjGLnKSGlP" 
+                           aria-label="Join our WhatsApp community" 
+                           target="_blank" 
+                           rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://t.me/byministry" 
+                           aria-label="Join our Telegram channel" 
+                           target="_blank" 
+                           rel="noopener noreferrer">
+                            <i class="fab fa-telegram" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://tiktok.com/@besorah.yeshua" 
+                           aria-label="Follow us on TikTok" 
+                           target="_blank" 
+                           rel="noopener noreferrer">
+                            <i class="fab fa-tiktok" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="prayer.html">Prayer</a></li>
+                        <li><a href="partnership.html">Partnership</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Get Involved</h4>
+                    <ul>
+                        <li><a href="donate.html">Donate</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="partnership.html">Volunteer</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="bible-planner.html">Bible Study</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                            <a href="mailto:besorahyeshua@gmail.com">besorahyeshua@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone" aria-hidden="true"></i>
+                            <a href="tel:+251963149592">+251 963 149592</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                            Wosen Sefer, Yeka, Addis Ababa 1000, Ethiopia
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="copyright-year">2024</span> Besorah Yeshua International Ministry. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files - CORRECTED ORDER -->
+    <script src="scripts/navigation.js"></script>
+    <script src="scripts/main.js"></script>
+    
+    <!-- Page-specific JavaScript -->
+    <script>
+        // Update copyright year
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
+        
+        // Dynamic content display based on form type
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const formType = urlParams.get('form') || 'general';
+            
+            // Get event details from URL or sessionStorage
+            const eventName = urlParams.get('event') || sessionStorage.getItem('eventName');
+            const eventDate = urlParams.get('date') || sessionStorage.getItem('eventDate');
+            const eventLocation = urlParams.get('location') || sessionStorage.getItem('eventLocation');
+            
+            // Determine which content to show
+            if (formType === 'event' || eventName) {
+                // Show event registration content
+                document.querySelector('.content-event').classList.add('active');
+                
+                // Fill in event details if available
+                if (eventName) {
+                    document.getElementById('eventNameDisplay').textContent = eventName;
+                } else {
+                    document.getElementById('eventNameDisplay').textContent = 'Event Registration';
+                }
+                
+                if (eventDate) {
+                    document.getElementById('eventDateDisplay').textContent = eventDate;
+                } else {
+                    document.getElementById('eventDateDisplay').textContent = 'Date will be sent via email';
+                }
+                
+                if (eventLocation) {
+                    document.getElementById('eventLocationDisplay').textContent = eventLocation;
+                } else {
+                    document.getElementById('eventLocationDisplay').textContent = 'Location will be sent via email';
+                }
+                
+                // Update page title for screen readers
+                document.getElementById('event-thank-you-heading').focus();
+                
+                // Clear sessionStorage
+                sessionStorage.removeItem('eventName');
+                sessionStorage.removeItem('eventDate');
+                sessionStorage.removeItem('eventLocation');
+            } else {
+                // Show general contact content
+                document.querySelector('.content-general').classList.add('active');
+                
+                // Focus heading for screen readers
+                document.getElementById('thank-you-heading').focus();
+            }
+            
+            // Announce to screen readers
+            const announcement = formType === 'event' 
+                ? 'Event registration confirmed' 
+                : 'Message sent successfully';
+            
+            const announcer = document.createElement('div');
+            announcer.setAttribute('role', 'status');
+            announcer.setAttribute('aria-live', 'polite');
+            announcer.className = 'sr-only';
+            announcer.textContent = announcement;
+            document.body.appendChild(announcer);
+            
+            // Remove announcement after it's been read
+            setTimeout(() => {
+                announcer.remove();
+            }, 3000);
+        });
+    </script>
+    
+    <style>
+        /* Screen reader only class */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+    </style>
+</body>
+</html>

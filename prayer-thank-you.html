@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thank you for submitting your prayer request to Besorah Yeshua International Ministry. Our prayer team will intercede on your behalf.">
+    <meta name="robots" content="noindex, follow">
+    
+    <title>Prayer Request Received - Besorah Yeshua International Ministry</title>
+    
+    <link rel="canonical" href="https://besorayeshuaministry.netlify.app/prayer-thank-you.html">
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" as="image" href="images/logo.png">
+    <link rel="preload" as="style" href="styles/style.css">
+    
+    <!-- Critical CSS inline -->
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;line-height:1.6;color:#333;overflow-x:hidden}
+        .page-loader{position:fixed;top:0;left:0;width:100%;height:100%;background:#fff;display:flex;align-items:center;justify-content:center;z-index:99999;transition:opacity 0.3s ease}
+        .loader-spinner{border:4px solid #f3f3f3;border-top:4px solid #205782;border-radius:50%;width:50px;height:50px;animation:spin 1s linear infinite}
+        @keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+    </style>
+    
+    <!-- Stylesheets - CORRECTED PATHS -->
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/navigation.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    
+    <!-- Page-specific styles -->
+    <style>
+        /* Thank You Page Styles */
+        .prayer-thank-you {
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+        }
+
+        .prayer-content {
+            text-align: center;
+            max-width: 600px;
+            padding: 3rem;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            animation: fadeInUp 0.6s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .prayer-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #205782, #2d6fa0);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            animation: scaleIn 0.5s ease;
+            box-shadow: 0 5px 20px rgba(32, 87, 130, 0.3);
+        }
+
+        .prayer-icon i {
+            font-size: 3rem;
+            color: #f2842f;
+        }
+
+        @keyframes scaleIn {
+            from {
+                transform: scale(0);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .prayer-content h1 {
+            color: #205782;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .prayer-content > p {
+            color: #666;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .scripture-box {
+            background: linear-gradient(135deg, #205782 0%, #2d6fa0 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            color: white;
+            box-shadow: 0 5px 15px rgba(32, 87, 130, 0.2);
+        }
+
+        .scripture-box i {
+            font-size: 2rem;
+            opacity: 0.3;
+            margin-bottom: 1rem;
+        }
+
+        .scripture-box blockquote {
+            margin: 0;
+        }
+
+        .scripture-box p {
+            font-style: italic;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: white;
+            line-height: 1.6;
+        }
+
+        .scripture-box cite {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            font-style: normal;
+            font-weight: 600;
+        }
+
+        .info-list {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            text-align: left;
+        }
+
+        .info-list h2 {
+            color: #205782;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        .info-list ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .info-list li {
+            padding: 1rem 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .info-list li:last-child {
+            border-bottom: none;
+        }
+
+        .info-list i {
+            color: #f2842f;
+            font-size: 1.3rem;
+            margin-top: 0.2rem;
+            flex-shrink: 0;
+        }
+
+        .info-list span {
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .info-list a {
+            color: #205782;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .info-list a:hover {
+            color: #f2842f;
+            text-decoration: underline;
+        }
+
+        .encouragement-text {
+            font-size: 1rem;
+            color: #666;
+            margin: 2rem 0 1rem;
+            padding: 1.5rem;
+            background: #fff9f0;
+            border-left: 4px solid #f2842f;
+            border-radius: 8px;
+            text-align: left;
+            line-height: 1.7;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.9rem 1.8rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background: #205782;
+            color: white;
+            border-color: #205782;
+        }
+
+        .btn-primary:hover {
+            background: #2d6fa0;
+            border-color: #2d6fa0;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(32, 87, 130, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #f2842f;
+            border-color: #f2842f;
+        }
+
+        .btn-secondary:hover {
+            background: #f2842f;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(242, 132, 47, 0.3);
+        }
+
+        .cta-box {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        .cta-box p {
+            font-size: 0.95rem;
+            color: #666;
+            margin: 0;
+        }
+
+        .cta-box a {
+            color: #f2842f;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .cta-box a:hover {
+            color: #205782;
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .prayer-content {
+                padding: 2rem 1.5rem;
+                margin: 1rem;
+            }
+
+            .prayer-content h1 {
+                font-size: 2rem;
+            }
+
+            .prayer-content > p {
+                font-size: 1rem;
+            }
+
+            .prayer-icon {
+                width: 80px;
+                height: 80px;
+            }
+
+            .prayer-icon i {
+                font-size: 2.5rem;
+            }
+
+            .scripture-box {
+                padding: 1.5rem;
+            }
+
+            .scripture-box p {
+                font-size: 1rem;
+            }
+
+            .info-list {
+                padding: 1.5rem;
+            }
+
+            .info-list h2 {
+                font-size: 1.3rem;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .prayer-thank-you {
+                padding: 3rem 0;
+            }
+
+            .prayer-content h1 {
+                font-size: 1.75rem;
+            }
+
+            .info-list li {
+                padding: 0.8rem 0;
+            }
+        }
+
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+            .prayer-content,
+            .prayer-icon {
+                animation: none;
+            }
+
+            .btn {
+                transition: none;
+            }
+
+            .btn:hover {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Page Loader -->
+    <div class="page-loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html" aria-label="Besorah Yeshua International Ministry Home">
+                        <img src="images/logo.png" 
+                             alt="Besorah Yeshua Ministry Logo" 
+                             class="logo" 
+                             width="50" 
+                             height="50"
+                             loading="eager">
+                        <span class="logo-text">Besorah Yeshua</span>
+                    </a>
+                </div>
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
+                    <li class="nav-item"><a href="prayer.html" class="nav-link">Prayer</a></li>
+                    <li class="nav-item"><a href="partnership.html" class="nav-link">Partnership</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <a href="donate.html" class="btn-donate">Donate</a>
+                <button class="hamburger" data-nav-toggle aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <section class="prayer-thank-you" aria-labelledby="thank-you-heading">
+            <div class="container">
+                <div class="prayer-content" role="status" aria-live="polite">
+                    <div class="prayer-icon" aria-hidden="true">
+                        <i class="fas fa-praying-hands"></i>
+                    </div>
+                    
+                    <h1 id="thank-you-heading">We're Praying For You 🙏</h1>
+                    <p>Thank you for sharing your prayer request with us. Our prayer team has received your request and will be interceding on your behalf.</p>
+
+                    <aside class="scripture-box" aria-label="Featured scripture">
+                        <i class="fas fa-quote-left" aria-hidden="true"></i>
+                        <blockquote>
+                            <p>"The prayer of a righteous person is powerful and effective."</p>
+                            <cite>— James 5:16 (NIV)</cite>
+                        </blockquote>
+                    </aside>
+
+                    <div class="info-list">
+                        <h2 id="next-steps-heading">What Happens Next?</h2>
+                        <ul aria-labelledby="next-steps-heading">
+                            <li>
+                                <i class="fas fa-check-circle" aria-hidden="true"></i>
+                                <span>Your request has been received by our dedicated prayer team</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-hands-praying" aria-hidden="true"></i>
+                                <span>We'll begin praying for your request today and throughout this week</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-heart" aria-hidden="true"></i>
+                                <span>You'll receive encouragement and prayer updates via email</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone" aria-hidden="true"></i>
+                                <span>For urgent needs, call us at <a href="tel:+251963149592">+251 963 149592</a></span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="encouragement-text">
+                        <strong>Remember:</strong> God hears your prayers and He cares about every detail of your life. "Cast all your anxiety on him because he cares for you" (1 Peter 5:7).
+                    </div>
+
+                    <nav class="action-buttons" aria-label="Quick navigation">
+                        <a href="index.html" class="btn btn-primary">
+                            <i class="fas fa-home" aria-hidden="true"></i>
+                            Back to Home
+                        </a>
+                        <a href="events.html" class="btn btn-secondary">
+                            <i class="fas fa-calendar" aria-hidden="true"></i>
+                            View Events
+                        </a>
+                    </nav>
+
+                    <div class="cta-box">
+                        <p>
+                            Want to join our prayer community? 
+                            <a href="partnership.html">Become a Prayer Partner</a> 
+                            or 
+                            <a href="contact.html">Contact Us</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="images/logo.png" 
+                         alt="Besorah Yeshua Ministry Logo" 
+                         class="footer-logo" 
+                         width="60" 
+                         height="60" 
+                         loading="lazy">
+                    <span class="footer-site-name">Besorah Yeshua</span>
+                    <p class="footer-tagline">International Ministry</p>
+                    <p class="footer-tagline">Spreading the Gospel to Ethiopia and the nations</p>
+                    <span class="follow-us">Follow Us</span>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/byministry_et" 
+                           aria-label="Follow us on Instagram" 
+                           target="_blank" 
+                           rel="noopener noreferrer">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://youtube.com/@byministry_et" 
+                           aria-label="Subscribe to our YouTube channel" 
+                           target="_blank" 
+                           rel="noopener noreferrer">
+                            <i class="fab fa-youtube" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://chat.whatsapp.com/CzuJYpQ0SoM7IjGLnKSGlP" 
+                           aria-label="Join our WhatsApp community" 
+                           target="_blank" 
+                           rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://t.me/byministry" 
+                           aria-label="Join our Telegram channel" 
+                           target="_blank" 
+                           rel="noopener noreferrer">
+                            <i class="fab fa-telegram" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://tiktok.com/@besorah.yeshua" 
+                           aria-label="Follow us on TikTok" 
+                           target="_blank" 
+                           rel="noopener noreferrer">
+                            <i class="fab fa-tiktok" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="prayer.html">Prayer</a></li>
+                        <li><a href="partnership.html">Partnership</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Get Involved</h4>
+                    <ul>
+                        <li><a href="donate.html">Donate</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="partnership.html">Volunteer</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="bible-planner.html">Bible Study</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-envelope" aria-hidden="true"></i> 
+                            <a href="mailto:besorahyeshua@gmail.com">besorahyeshua@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone" aria-hidden="true"></i> 
+                            <a href="tel:+251963149592">+251 963 149592</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i> 
+                            Wosen Sefer, Yeka, Addis Ababa 1000, Ethiopia
+                        </li>
+                    </ul>
+                </div>                
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="copyright-year">2024</span> Besorah Yeshua International Ministry. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files - CORRECTED ORDER -->
+    <script src="scripts/navigation.js"></script>
+    <script src="scripts/main.js"></script>
+    
+    <!-- Page-specific JavaScript -->
+    <script>
+        // Update copyright year
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
+        
+        // Hide page loader
+        window.addEventListener('load', function() {
+            const loader = document.querySelector('.page-loader');
+            if (loader) {
+                setTimeout(() => {
+                    loader.style.opacity = '0';
+                    setTimeout(() => {
+                        loader.style.display = 'none';
+                    }, 300);
+                }, 500);
+            }
+        });
+
+        // Display prayer type if stored
+        if (sessionStorage.getItem('prayerSubmitted') === 'true') {
+            const prayerType = sessionStorage.getItem('prayerType');
+            const prayerCategory = sessionStorage.getItem('prayerCategory');
+            
+            // Optional: Customize message based on prayer type
+            if (prayerType) {
+                console.log('Prayer type submitted:', prayerType);
+            }
+            
+            // Clear session storage
+            sessionStorage.removeItem('prayerSubmitted');
+            sessionStorage.removeItem('prayerType');
+            sessionStorage.removeItem('prayerCategory');
+        }
+    </script>
+</body>
+</html>

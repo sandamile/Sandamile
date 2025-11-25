@@ -1,0 +1,181 @@
+# ===================================
+# NETLIFY CONFIGURATION - BESORAH YESHUA MINISTRY
+# Fixed & Optimized for Production
+# ===================================
+
+[build]
+  publish = "."
+  command = "echo 'Static site - no build needed'"
+
+[build.environment]
+  NODE_VERSION = "18"
+  
+# Add this section if not already present:
+[build.processing]
+  skip_processing = false
+
+# ===================================
+# NETLIFY FORMS CONFIGURATION
+# ===================================
+[forms]
+  spam_filter = true
+
+# ===================================
+# REDIRECT RULES - FIXED & OPTIMIZED
+# ===================================
+
+# Fix typo in prayer thank you page
+[[redirects]]
+  from = "/prayer-than-you.html"
+  to = "/prayer-thank-you.html"
+  status = 301
+  force = true
+
+# Redirect old home URLs
+[[redirects]]
+  from = "/home"
+  to = "/index.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/home.html"
+  to = "/index.html"
+  status = 301
+  force = true
+
+# Custom 404 page - MUST come before catch-all
+[[redirects]]
+  from = "/404"
+  to = "/404.html"
+  status = 404
+
+# SPA-style routing - catch-all (MUST be last!)
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
+
+# ===================================
+# SECURITY HEADERS - OPTIMIZED
+# ===================================
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+# HSTS for HTTPS only
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+
+# Content Security Policy - RELAXED for functionality
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = '''
+      default-src 'self';
+      script-src 'self' 'unsafe-inline' 'unsafe-eval' 
+        https://cdnjs.cloudflare.com 
+        https://www.paypal.com 
+        https://*.paypal.com
+        https://cdn.jsdelivr.net
+        https://unpkg.com;
+      style-src 'self' 'unsafe-inline' 
+        https://cdnjs.cloudflare.com 
+        https://fonts.googleapis.com;
+      img-src 'self' data: https: blob:;
+      font-src 'self' data:
+        https://cdnjs.cloudflare.com 
+        https://fonts.gstatic.com;
+      connect-src 'self' 
+        https://www.paypal.com 
+        https://*.paypal.com;
+      frame-src 'self' 
+        https://www.paypal.com 
+        https://*.paypal.com;
+      media-src 'self' data: blob:;
+      object-src 'none';
+      base-uri 'self';
+      form-action 'self' 
+        https://www.paypal.com;
+      worker-src 'self' blob:;
+    '''
+
+# ===================================
+# CACHE CONTROL - OPTIMIZED
+# ===================================
+
+# Cache static assets for 1 year
+[[headers]]
+  for = "/styles/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/scripts/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# HTML files - no cache for fresh updates
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Service worker - short cache
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Manifest - moderate cache
+[[headers]]
+  for = "/manifest.json"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+# ===================================
+# DEVELOPMENT SERVER SETTINGS
+# ===================================
+[dev]
+  command = "npx http-server . -p 8888"
+  targetPort = 8888
+  port = 8888
+  publish = "."
+  autoLaunch = true
+
+# ===================================
+# CONTEXT-SPECIFIC SETTINGS
+# ===================================
+
+# Production
+[context.production]
+  [context.production.environment]
+    NETLIFY_ENV = "production"
+
+# Branch deploys
+[context.branch-deploy]
+  [context.branch-deploy.environment]
+    NETLIFY_ENV = "branch-deploy"
+
+# Deploy previews
+[context.deploy-preview]
+  [context.deploy-preview.environment]
+    NETLIFY_ENV = "deploy-preview"
